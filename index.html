@@ -83,7 +83,7 @@
     </main>
     <footer><span>Operator account only</span><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></footer>
     <script>
-      const API = "http://localhost:8766";
+      const API = "http://localhost:8765";
       const $ = (id) => document.getElementById(id);
       const log = (message, kind="") => { $("log").textContent += `\n${new Date().toLocaleTimeString()} ${message}`; $("log").className = kind; $("log").scrollTop = $("log").scrollHeight; };
       const call = async (path, method="GET") => {
