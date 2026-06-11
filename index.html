@@ -12,6 +12,7 @@
       header { display:flex; align-items:center; gap:18px; padding:28px 0 20px; }
       header img { width:58px; height:58px; border-radius:14px; }
       h1,h2,p { margin:0; } h1 { font-size:24px; } h2 { font-size:20px; margin-bottom:14px; }
+      p + p { margin-top:12px; }
       .muted { color:var(--muted); } .tag { color:var(--cyan); font-size:13px; font-weight:800; letter-spacing:.12em; }
       .status { margin-left:auto; padding:9px 14px; border:1px solid var(--line); border-radius:999px; color:var(--muted); }
       .grid { display:grid; grid-template-columns:1.1fr .9fr; gap:20px; }
@@ -35,10 +36,15 @@
   <body>
     <header>
       <img src="profile-icon.png" alt="">
-      <div><div class="tag">PRIVATE OPERATOR TOOL</div><h1>Mada Shiranai Hanashi Publisher</h1></div>
+      <div><div class="tag">OFFICIAL PUBLISHING APPLICATION</div><h1>Mada Shiranai Hanashi Publisher</h1></div>
       <div class="status" id="connection">Local agent: checking...</div>
     </header>
     <main>
+      <section class="card">
+        <h2>About this application</h2>
+        <p>Mada Shiranai Hanashi Publisher is the official web publishing application for the Japanese educational video channel <strong>Mada Shiranai Hanashi</strong>.</p>
+        <p class="muted">The application lets the channel operator authorize the official TikTok account, publish original educational videos with TikTok's Content Posting API, check publication status, and retrieve basic video metrics for editorial review. It is operated by the owner of the Mada Shiranai Hanashi channel and is not affiliated with or endorsed by TikTok.</p>
+      </section>
       <div class="steps"><span id="step-auth">1. Login Kit</span><span id="step-publish">2. Direct Post</span><span id="step-list">3. video.list</span></div>
       <div class="grid">
         <section>
@@ -81,7 +87,7 @@
         </aside>
       </div>
     </main>
-    <footer><span>Operator account only</span><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></footer>
+    <footer><span>Mada Shiranai Hanashi</span><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="https://github.com/yoda-orchestrator/mada-shiranai-publisher/issues">Contact</a></footer>
     <script>
       const API = "http://localhost:8765";
       const $ = (id) => document.getElementById(id);
